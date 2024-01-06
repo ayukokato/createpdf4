@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@mui/x-data-grid": "^6.17.0",
+    "react-data-grid": "^7.0.0-beta.40",
+    "recharts": "^2.9.1"
+  },
+  "devDependencies": {
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0"
+  }
+}
