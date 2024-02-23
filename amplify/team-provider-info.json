@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-createpdf4-dev-00416-authRole",
+      "UnauthRoleArn": "arn:aws:iam::743711627099:role/amplify-createpdf4-dev-00416-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::743711627099:role/amplify-createpdf4-dev-00416-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-createpdf4-dev-00416-deployment",
+      "UnauthRoleName": "amplify-createpdf4-dev-00416-unauthRole",
+      "StackName": "amplify-createpdf4-dev-00416",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:743711627099:stack/amplify-createpdf4-dev-00416/c5116d70-7347-11ee-aaa2-06012098a3cd",
+      "AmplifyAppId": "d15n27wu7y91p3"
+    },
+    "categories": {
+      "function": {
+        "fetchItems": {
+          "deploymentBucketName": "amplify-createpdf4-dev-00416-deployment",
+          "s3Key": "amplify-builds/fetchItems-756177535a482b384362-build.zip"
+        }
+      },
+      "api": {
+        "createpdfapi": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d15n27wu7y91p3",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

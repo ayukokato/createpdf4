@@ -1,0 +1,27 @@
+{
+    "0": {
+        "template": [
+            50,
+            60
+        ],
+        "開封数": [
+            50,
+            60
+        ],
+        "filledQuantity": null
+    },
+    "1": {
+        "template": [
+            50,
+            60
+        ],
+        "開封数": [
+            50,
+            60
+        ],
+        "filledQuantity": null
+    },
+    "template": "",
+    "開封数": "",
+    "filledQuantity": ""
+}

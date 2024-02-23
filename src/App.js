@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useRoutes } from "react-router-dom";
+import { HelmetProvider, Helmet } from "react-helmet-async";
+import { CacheProvider } from "@emotion/react";
 
-function App() {
+import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+
+import "./i18n";
+import createTheme from "./theme";
+import routes from "./routes";
+
+import useTheme from "./hooks/useTheme";
+import createEmotionCache from "./utils/createEmotionCache";
+
+const clientSideEmotionCache = createEmotionCache();
+function App({ emotionCache = clientSideEmotionCache }) {
+
+  const content = useRoutes(routes);
+
+  const { theme } = useTheme();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <CacheProvider value={emotionCache}>
+      <HelmetProvider>
+        <Helmet
+          titleTemplate="%s | speedyjob - Admin Dashboard"
+          defaultTitle="speedyjob - Admin Dashboard"
+        />
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <MuiThemeProvider theme={createTheme(theme)}>
+               {content} 
+            </MuiThemeProvider>
+          </LocalizationProvider>
+      </HelmetProvider>
+    </CacheProvider>
   );
 }
 
